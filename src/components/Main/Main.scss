@@ -1,0 +1,42 @@
+.container-main {
+    display: flex;
+    height: 750px;
+    background: #996B60;
+}
+
+.left-side {
+    width: 720px;
+    background: url('/static/Main-img.jpg') left top / cover no-repeat, lightgray;
+}
+
+.Description {
+    margin: 0;
+    padding-top: 35px;
+    width: 457px;
+    color: #FFF;
+    font-size: 73px;
+}
+
+.main-text {
+    width: 572px;
+    margin: 0;
+    padding: 35px 0 45px 0;
+    color: #FFF;
+    font-size: 18px;
+    text-align: left;
+}
+
+.main-btn {
+    color: #34caf8;
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main-descr {
+    margin-top: 180px;
+    width: 600px;
+    height: 423px;
+    padding: 20px;
+}

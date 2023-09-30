@@ -1,0 +1,49 @@
+h3 {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.carousel {
+    min-height: 700px;
+    background: url('/static/doski-dereva-1.jpg') no-repeat center center;
+    background-size: contain;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+#image {
+    margin-top: 55px;
+    height: 350px;
+}
+
+#prev-btn,
+#next-btn {
+    position: absolute;
+    background-color: transparent;
+    width: 50px;
+    height: 57px;
+    border: none;
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 270px;
+    margin-top: 3%;
+}
+
+#next-btn {
+    right: 270px;
+   margin-top: 3%;
+}

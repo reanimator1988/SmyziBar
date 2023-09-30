@@ -1,0 +1,142 @@
+.menu-container {
+    min-height: 750px;
+}
+
+h4 {
+    color: rgb(113, 6, 235);
+    margin-top: 40px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menu-name {
+    margin-top: 5px;
+    color: rgb(113, 6, 235);
+    font-size: 20px;
+}
+
+.menu-item {
+    width: 320px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.menu-item img {
+    width: 230px;
+    height: 230px;
+}
+
+.menu-item-description {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.menu-item-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.menu-item-old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+    margin-top: 5px;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #f84ebf;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: rgb(7, 243, 243);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup input[type="text"],
+.popup input[type="tel"],
+.popup select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button[type="submit"] {
+    background: #ee28ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.volume-label {
+    font-size: 14px;
+    color: #888;
+}
