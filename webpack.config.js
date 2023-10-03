@@ -9,7 +9,7 @@ module.exports = {
         filename: 'App-[fullhash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: './',
+        // publicPath: './',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -29,6 +29,13 @@ module.exports = {
                     options: {
                         presets: ['@babel/preset-env', '@babel/preset-react'],
                     },
+                },
+            },
+            {
+                test: /\.webp$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name]-[contenthash][ext]',
                 },
             },
             {
@@ -69,6 +76,7 @@ module.exports = {
                 'image/jpeg': ['jpg', 'jpeg'],
                 'image/png': ['png'],
                 'image/svg+xml': ['svg'],
+                'image/webp': ['webp'],
             },
         },
     },

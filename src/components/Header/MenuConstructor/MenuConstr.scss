@@ -1,0 +1,131 @@
+.MenuConstr-header {
+    padding-top: 100px;
+}
+
+.MenuConstr {
+    background: rgb(121, 44, 80);
+    min-height: 1500px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.image-item {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.image-item.unavailable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.product-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 15px;
+}
+
+.product-name {
+ margin: 0;
+}
+
+.product-pricePerLiter {
+    margin: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 45%;;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.MenuConstr-btn {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.label-container {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.label-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.select-container select {
+    width: 7%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.select-container select:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+.selected-product {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin: 4px 0;
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+
+  .selected-order {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .MenuConstr-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
