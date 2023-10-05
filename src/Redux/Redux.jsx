@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-
 const loadOrdersFromLocalStorage = () => {
   try {
     const serializedOrders = localStorage.getItem('orders');
@@ -12,7 +11,7 @@ const loadOrdersFromLocalStorage = () => {
     const updatedOrders = orders.map(order => ({
       ...order,
       price: isNaN(order.price) ? 0 : parseFloat(order.price),
-      cocktailName: order.cocktailName || '',
+      cocktailName: order.cocktailName || ''
     }));
 
     return updatedOrders;
@@ -35,16 +34,22 @@ const loadTotalAmountFromLocalStorage = () => {
   }
 };
 
-const cartSlice = createSlice({
+export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     orders: loadOrdersFromLocalStorage(),
-    totalAmount: parseFloat(loadTotalAmountFromLocalStorage()),
+    totalAmount: loadTotalAmountFromLocalStorage(),
   },
   reducers: {
     addOrder: (state, action) => {
-      state.orders.push(action.payload);
-      state.totalAmount += parseFloat(action.payload.price);
+      const { cocktailName, price, volume } = action.payload;
+      const order = {
+        cocktailName,
+        price,
+        volume,
+      };
+      state.orders.push(order);
+      state.totalAmount += price;
       localStorage.setItem('orders', JSON.stringify(state.orders));
       localStorage.setItem('totalAmount', state.totalAmount.toString());
     },
@@ -62,4 +67,6 @@ const cartSlice = createSlice({
 export const { addOrder, removeOrder } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+
 
