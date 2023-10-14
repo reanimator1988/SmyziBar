@@ -52,7 +52,7 @@ const ShoppingCart = () => {
   return (
     <div className="shopping-cart">
       <h4>Кошик замовлень</h4>
-      {cartOrders.length === 0 ? (
+      {cartOrders.length === 0 ?( 
         <div className="empty-cart">
           <p className="shopping-text">Ще нічого не додано</p>
           <Link to="/menu-constructor">
@@ -173,7 +173,7 @@ const OrderForm = ({ onSubmit }) => {
 const OrderSummary = ({ data, deliveryOption, onClose }) => {
   return (
     <div className="order-summary">
-      <h4>Ваше замовлення</h4>
+      <h6>Ваше замовлення</h6>
       <p>Ім'я: {data.name}</p>
       <p>Телефон: {data.phone}</p>
       <p>Спосіб доставки: {deliveryOption === 'pickup' ? 'Самовивіз' : 'Доставка'}</p>
